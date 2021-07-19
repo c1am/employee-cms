@@ -5,7 +5,8 @@ This Employee Content Management System (CMS) manages employees of a company. Th
 
 ## Installation
 ```
-Deployment link to website: https://github.com/c1am/employee-cms
+Deployment link to website: https://c1am.github.io/employee-cms/
+Github link: https://github.com/c1am/employee-cms
 You can clone the code directly from Github and run it locally.
 ```
 
