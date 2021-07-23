@@ -26,11 +26,11 @@ const viewEmployeeByManager = (connection) => {
     .then((data) => {
       query = `SELECT first_name, last_name, title, salary FROM employee as e LEFT JOIN role as r on e.role_id = r.id WHERE manager_id = ${data.manager_id.split(':')[0]}`;
       connection.query(query, (err1, res1) => {
-        const bonus = require('./bonus');
+        const bonus = require('./bonusFunctions');
         if (err1) throw err1;
 
         // Log the list of that manager's employee(s) in console
-        console.log(`Employee List for: ${data.manager_id.split(':')[1]}`);
+        console.log(`Employee list for: ${data.manager_id.split(':')[1]}`);
         console.table(res1);
         bonus(connection);
       });

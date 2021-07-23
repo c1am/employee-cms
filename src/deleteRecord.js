@@ -18,7 +18,7 @@ const deleteRecord = (connection, action, table) => {
               questions = [{
                 type: "list",
                 name: "empl",
-                message: "Please select employee to delete: ",
+                message: "Please select an employee to delete: ",
                 choices: employees
               }]
             )
@@ -52,7 +52,7 @@ const deleteRecord = (connection, action, table) => {
               questions = [{
                 type: "list",
                 name: "title",
-                message: "Please select role title to delete: ",
+                message: "Please select a role to delete: ",
                 choices: roles
               }]
             )
@@ -86,7 +86,7 @@ const deleteRecord = (connection, action, table) => {
               questions = [{
                 type: "list",
                 name: "dept_name",
-                message: "Please select department to delete: ",
+                message: "Please select a department to delete: ",
                 choices: dept_names
               }]
             )

@@ -28,23 +28,23 @@ const addRecord = (connection, action, table) => {
               questions = [{
                 type: "input",
                 name: "first",
-                message: "Please enter employee first name: "
+                message: "Please enter employee's first name: "
               },
               {
                 type: "input",
                 name: "last",
-                message: "Please enter employee last name: "
+                message: "Please enter employee's last name: "
               },
               {
                 type: "list",
                 name: "role_id",
-                message: "Please select role: ",
+                message: "Please select a role: ",
                 choices: roles
               },
               {
                 type: "list",
                 name: "manager_id",
-                message: "Please select manager: ",
+                message: "Please select a manager: ",
                 choices: managers
               }]
             )
@@ -87,17 +87,17 @@ const addRecord = (connection, action, table) => {
             questions = [{
               type: "input",
               name: "title",
-              message: "Please enter Role name: "
+              message: "Please enter the role name: "
             },
             {
               type: "input",
               name: "salary",
-              message: "Please enter Role salary: "
+              message: "Please enter this role's salary: "
             },
             {
               type: "list",
               name: "dept_id",
-              message: "Please select department: ",
+              message: "Please select the department this role is under: ",
               choices: depts
             }]
           )
@@ -123,7 +123,7 @@ const addRecord = (connection, action, table) => {
             questions = [{
               type: "input",
               name: "dept_name",
-              message: "Please enter name of Department: "
+              message: "Please enter the name of the department: "
             }]
           )
 

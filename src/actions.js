@@ -1,6 +1,6 @@
 // actions
 const viewTable = require('./viewTable');
-const addRec = require('./addRec');
+const addRec = require('./addRecord');
 const deleteRecord = require('./deleteRecord');
 const budget = require('./budget');
 const managerViewEmployee = require('./managerViewEmployee');
@@ -30,7 +30,7 @@ const actions = (connection, action, table) => {
             managerViewEmployee(connection, action, table);
             break;
         case "Department Budget":
-            bonusFunctions(connection);
+            budget(connection);
             break;
         }
 }

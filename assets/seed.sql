@@ -1,38 +1,41 @@
--- use database
+-- Use database
 USE employeeDB;
 
--- populate department table
+
+-- Populate department table
 DELETE FROM department;
 INSERT INTO department (name) VALUES
 ('Sales'),
-('Engineering'),
-('Operations'),
+('Telecommunications'),
+('Field Services'),
 ('Human Resources');
 
--- populate role table
+
+-- Populate role table
 DELETE FROM role;
 INSERT INTO role (title, salary, department_id) VALUES
 ('Sales Manager', 150000, 1),
 ('Sales Person', 100000, 1),
-('Eng Manager', 180000, 2),
-('Eng TL', 180000, 2),
-('Engineer', 120000, 2),
-('Op Manager', 120000, 3),
-('Op TL', 100000, 3),
-('Op Technician', 75000, 3),
-('HR Manager', 70000, 4),
-('HR Staff', 70000, 4);
+('Telecom Manager', 180000, 2),
+('Telecom Supervisor', 180000, 2),
+('Telecom Technician', 120000, 2),
+('Field Service Manager', 120000, 3),
+('Field Service Technician', 100000, 3),
+('Project Technician', 75000, 3),
+('Human Resources Manager', 70000, 4),
+('Human Resources Supervisor', 70000, 4);
 
--- populate employee table
+
+-- Populate employee table
 DELETE FROM employee;
 INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES
-('Sam', 'Taylor', 1, NULL),
-('Peter', 'Wood', 2, 1),
-('Rob', 'Indigo', 3, NULL),
-('Steve', 'George', 4, 3),
-('William', 'Nash', 5, 4),
-('Eric', 'Bates', 6, NULL),
-('Sal', 'Scaleon', 7, 6),
-('Howard', 'England', 8, 7),
-('Emma', 'Johnson', 9, NULL),
-('Lauren', 'Yates', 10, 9);
+('Anne', 'Greyburg', 1, NULL),
+('Patrick', 'Thomas', 2, 1),
+('Katelyn', 'Mullen', 3, NULL),
+('Matthew', 'Pewter', 4, 3),
+('Bill', 'Thompson', 5, 4),
+('Erik', 'Copper', 6, NULL),
+('Jun', 'Kim', 7, 6),
+('Beatrice', 'Duncan', 8, 7),
+('Yunat', 'Pesha', 9, NULL),
+('Lucas', 'Howard', 10, 9);

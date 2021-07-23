@@ -17,7 +17,7 @@ const updateEmployeeManager = (connection) => {
       questions = [{
         type: "list",
         name: "empl_id",
-        message: "Please select employee to update his manager: ",
+        message: "Please select an employee to update the manager for: ",
         choices: employees
       }]
     )
@@ -45,7 +45,7 @@ const updateEmployeeManager = (connection) => {
             questions = [{
               type: "list",
               name: "mgr_id",
-              message: "Please select new manager: ",
+              message: "Please select a new manager: ",
               choices: managers
             }]
           )
@@ -62,7 +62,7 @@ const updateEmployeeManager = (connection) => {
               // Display updated list of all employees for this manager to show new addition
               query = `SELECT e.first_name, e.last_name, title, salary, CONCAT(m.first_name, ' ', m.last_name) AS manager FROM employee as e LEFT JOIN employee AS m ON m.id = e.manager_id LEFT JOIN role as r on e.role_id = r.id WHERE e.manager_id = ${manager_id}`;
               connection.query(query, (err4, res4) => {
-                const bonus = require('./bonus');
+                const bonus = require('./bonusFunctions');
                 if (err4) throw err4;
                 console.log(`Employee List for: ${manager_name}`);
                 console.table(res4);

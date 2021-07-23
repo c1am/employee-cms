@@ -1,11 +1,13 @@
--- create database
+-- Create database
 DROP DATABASE IF EXISTS employeeDB;
 CREATE database employeeDB;
 
--- use database
+
+-- Use database
 USE employeeDB;
 
--- create department table
+
+-- Create department table
 CREATE TABLE department (
   id INT AUTO_INCREMENT,
   name VARCHAR(30) DEFAULT NULL,
@@ -13,7 +15,7 @@ CREATE TABLE department (
 );
 
 
--- create role table
+-- Create role table
 CREATE TABLE role (
   id INT AUTO_INCREMENT,
   title VARCHAR(30) DEFAULT NULL,
@@ -23,7 +25,8 @@ CREATE TABLE role (
   FOREIGN KEY (department_id) REFERENCES department(id)
 );
 
--- create employee table
+
+-- Create employee table
 CREATE TABLE employee (
   id INT AUTO_INCREMENT,
   first_name VARCHAR(30) DEFAULT NULL,

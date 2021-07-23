@@ -9,13 +9,13 @@ const bonusFunctions = (connection) => {
           type: "list",
           name: "selection",
           message: `Please select bonus menu option: `,
-          choices: ["Update Employee Role", "Update Employee Manager", "View Employees by Manager", "Department Budget", "Return to Main"]
+          choices: ["Update Employee Role", "Update Employee Manager", "View Employees by Manager", "Department Budget", "Return to Main Menu"]
         }]        
   )
   .then((data) => {
       const main = require('./main');
       switch(data.selection) {
-          case "Return to Main":
+          case "Return to Main Menu":
               main(connection);
               break;
           default:

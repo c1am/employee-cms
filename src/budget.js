@@ -24,7 +24,7 @@ const budget = (connection) => {
     .then((data) => {
       query = `SELECT SUM(salary) as budget FROM role WHERE department_id = ${data.dept_id.split(':')[0]}`;
       connection.query(query, (err1, res1) => {
-        const bonus = require('./bonus');
+        const bonus = require('./bonusFunctions');
         if (err1) throw err1;
 
         // Log the total budget in console

@@ -7,7 +7,8 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
     "dependencies": "0.0.1",
     "dotenv": "^10.0.0",
     "inquirer": "^8.1.1",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "start": "^5.1.0"
   }
 }

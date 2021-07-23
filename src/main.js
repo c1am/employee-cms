@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const subMenu = require('./subMenu');
-const bonus = require('./bonus');
+const bonus = require('./bonusFunctions');
 
 // Main menu items
 const main = (connection) => 
@@ -9,7 +9,7 @@ const main = (connection) =>
           type: "list",
           name: "selection",
           message: "Please select menu option: ",
-          choices: ["View", "Add", "Delete", "Bonus", "Exit"]
+          choices: ["View", "Add", "Delete", "Other (bonus) Functions", "Exit"]
         }]
       )
 
@@ -18,7 +18,7 @@ const main = (connection) =>
             case "Exit":
                 connection.end();
                 break;
-            case "Bonus":
+            case "Other (bonus) Functions":
                 bonus(connection);
                 break;
             default:

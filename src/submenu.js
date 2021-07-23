@@ -10,14 +10,14 @@ const subMenu = (connection, action) => {
         type: "list",
         name: "selection",
         message: `Please select ${action} menu option: `,
-        choices: ["Employee", "Role", "Department", "Return to Main"]
+        choices: ["Employee", "Role", "Department", "Return to Main Menu"]
     }]        
   )
 
   .then((data) => {
       const main = require('./main');
       switch(data.selection) {
-          case "Return to Main":
+          case "Return to Main Menu":
               main(connection);
               break;
           default:
