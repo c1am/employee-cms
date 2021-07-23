@@ -17,8 +17,8 @@ Please watch a video demonstration of the application at [this link](https://dri
 
 
 ## Built With
-Javascript
-MySQL
+- Javascript
+- MySQL
 
 
 ## Authors
